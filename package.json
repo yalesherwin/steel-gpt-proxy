@@ -1,7 +1,7 @@
 {
   "name": "steel-gpt-proxy",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "commonjs",
   "type": "module",
   "scripts": {
     "start": "node server.js"
