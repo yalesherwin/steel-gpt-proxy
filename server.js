@@ -6,7 +6,8 @@ const axios = require("axios");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const OPENAI_API_KEY = "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";
+// ✅ 从环境变量中读取 OpenAI Key
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -37,5 +38,6 @@ app.post("/chat", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`⚡ 中转服务器运行中: http://localhost:${port}`);
+  console.log(`✅ 中转服务器运行中: http://localhost:${port}`);
 });
+
